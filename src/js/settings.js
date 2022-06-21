@@ -4,6 +4,7 @@ export const select = {
   },
   containerOf: {
     pages: '#pages',
+    menu: '.product-list',
   },
   menuProduct: {
     clickable: '.product__header',

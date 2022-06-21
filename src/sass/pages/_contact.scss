@@ -1,0 +1,56 @@
+#contact {
+  padding: 30px;
+  text-align: center;
+  font-family: $font-family;
+  font-size: 24px;
+  font-weight: $font-bold;
+  margin: 0 auto;
+  
+  label {
+    display: block;
+  }
+}
+  
+input,
+textarea {
+  margin: 40px 0;
+  padding: 10px 0;
+  width: 450px;
+  border: solid;
+}
+
+#message {
+  margin: 40px 0;
+  padding: 10px 0;
+  height: 200px;
+  width: 450px;
+  border: solid;
+}
+
+button {
+  font-family: $font-family;
+  font-weight: $font-bold;
+  display: block;
+  font-size: 20px;
+  font-stretch: expanded;
+  background-color: $color-detail;
+  color: $color-light;
+  width: 170px;
+  height: 50px;
+  border: none;
+  letter-spacing: 4px;
+  margin: 0 auto;
+  
+}
+
+#contatct .container .line::after {
+  position: absolute;
+  content: '';
+  bottom: -12px;
+  top: 55%;
+  left: 47%;
+  width: 280px;
+  height: 7px;
+  transform: translateX(-50%);
+  background: $color-detail;
+}

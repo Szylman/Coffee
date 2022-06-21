@@ -1,12 +1,22 @@
 /*Universal reglas e.g. container, class grid */
 
 .container {
-    position: relative;
-    width: auto;
-    padding: 3%;
+  position: relative;
+  width: auto;
+  padding: 3%;
 }
 
 body, html {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
+}
+
+#pages {
+  > * {
+    display: none;
+  }
+  
+  > .active {
+    display: block;
+  }
 }

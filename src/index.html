@@ -1,138 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL TIGRE</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EL TIGRE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <div class="hero-image">
+  <div class="hero-image">
+    <div class="container">
+      <div class="topnav nav-text main-nav">
+        <a href="#home">HOME</a>
+        <a href="#products">PRODUCTS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      <div class="top-left logo">
+        <h1>EL TIGRE</h1>
+        <h2>VENEZUELA COFFEE BEANS</h2>
+      </div>
+    </div>
+    <div class="main-text ">
+      <div class="hero-text-first">
+        <h1>HOME OF<br></h1>
+      </div>
+      <div class="hero-text-secound">
+        <h1>ORGINAL TASTES</h1>
+      </div>
+    </div>
+    <div class="discover">
+      <p class="discover-text">DISCOVER<br></p>
+      <i class="icon-down-circled2"></i>
+    </div>
+
+  </div>
+  <div id="pages">
+    <section id="home">
+      <div class="products">
+        <div class="container" data-container="productsContainer">
+          <h1>PRODUCTS</h1>
+          <div class="product-list"></div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="wrapp">
+        </div>
         <div class="container">
-            <div class="topnav nav-text main-nav">
-                <a href="#home">HOME</a>
-                <a href="#products">PRODUCTS</a>
-                <a href="#contact">CONTACT</a>
-          </div>
-            <div class="top-left logo">
-                <h1>EL TIGRE</h1>
-                <h2>VENEZUELA COFFEE BEANS</h2>
-            </div>
+          <h1>ABOUT US</h1>
+          <p>Who are we? Just a bunch of friends with <br>
+            a love for a good coffee and desire to create <br>
+            something new, something original.</p>
+          <p>Our coffees reflect us - young, wild and free. <br>
+            We are on the journey of new tastes...</p>
+          <p>Join us!</p>
         </div>
-        <div class="main-text">
-        <div class="hero-text-first">
-            <h1>HOME OF<br></h1>
+      </div>
+    </section>
+    <section id="products">
+      <h1>PRODUCTS</h1>
+      <div id="product-list" class="product-list container"></div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <div class="line">
+          <h1>CONTACT US</h1>
         </div>
-        <div class="hero-text-secound">
-            <h1 style="text-align:right;">  ORGINAL TASTES</h1>
-        </div>
-    </div>
-        <div class="discover">
-           <p class="discover-text">DISCOVER<br></p> 
-             <i class="icon-down-circled2"></i>
-        </div>
-
-    </div>
-    <div id="pages">
-        <section id="home">
-            <p>asd</p>
-          <div class="home-wrapper container"></div>
-        </section>
-        <section id="products">
-            <p>asd</p>
-          <div id="product-list" class="product-list container"></div>
-        </section>
-        <section id="contact">
-            <p>asd</p>
-          <div class="contact-wrapper container"></div>
-        </section>
-    </div>
-
-    <script id="template-menu-product" type="text/x-handlebars-template">
-        <article class="product"> <!-- product -->
-    
-            <header class="product__header">
-              <h3 class="product__name no-spacing">{{ name }} <i class="fas fa-chevron-down product__icon"></i></h3>
-              <p class="product__base-price no-spacing">${{ price }}</p>
-            </header>
-            <div class="product__description"> <!-- description -->
-              <p>{{{ description }}}</p>
-            </div> <!-- .description -->
-            <div class="product__wrapper"> <!-- details -->
-              <form class="product__order">
-                <ul class="product__params"> <!-- params -->
-                  {{#each params as |param paramId| }}
-                  {{#ifEquals type "checkboxes"}}
-                  <li> <!-- checkboxes -->
-                    <h3 class="product__params-title">{{{ label }}}</h3>
-                    {{#each options}}
-                    <div class="checkbox"> <!-- checkbox -->
-                      <label>
-                        <input type="checkbox" name="{{ paramId }}" value="{{ @key }}" id="{{ @key }}" {{#if default}}checked{{/if}}>
-                        <span class="checkbox__checkmark"></span>
-                        {{{ label }}} (${{{ price }}})
-                      </label>
-                    </div>
-                    {{/each}}
-                  </li>
-                  {{/ifEquals}}
-                  {{#ifEquals type "radios"}}
-                  <li> <!-- radios -->
-                    <h3 class="product__params-title">{{{ label }}}</h3>
-                    {{#each options}}
-                    <div class="checkbox checkbox--round"> <!-- radio -->
-                      <label>
-                        {{{ label }}} (${{{ price }}})
-                        <input type="radio" name="{{ paramId }}" value="{{ @key }}" id="{{ @key }}" {{#if default}}checked{{/if}}>
-                        <span class="checkbox__checkmark"></span>
-                      </label>
-                    </div>
-                    {{/each}}
-                  </li>
-                  {{/ifEquals}}
-                  {{#ifEquals type "select"}}
-                  <li> <!-- select -->
-                    <h3 class="product__params-title">{{{ label }}}</h3>
-                    <select name="{{ paramId }}">
-                      {{#each options}}
-                      <option value="{{ @key }}" {{#if default}}selected{{/if}}>{{{ label }}} (${{{ price }}})</option>
-                      {{/each}}
-                    </select>
-                  </li>
-                  {{/ifEquals}}
-                  {{/each}}
-                </ul>
-                <div class="amount"> <!-- controls -->
-                  <div class="widget-amount"> <!-- widget-amount -->
-                    <h3 class="product__params-title">Select quantity</h3>
-                    <a class="btn-quantity" href="#less"><i class="fas fa-minus"></i></a>
-                    <input class="amount" type="text">
-                    <a class="btn-quantity" href="#more"><i class="fas fa-plus"></i></a>
-                  </div>
-                  <p class="product__total-price">
-                    Total: $<span class="price">{{{ price }}}</span>
-                  </p>
-                  <div> <!-- add-to-cart -->
-                    <a class="btn-primary" href="#add-to-cart">Add to cart</a>
-                  </div>
-                </div>
-              </form>
-              <div class="product__images {{ class }}"> <!-- images -->
-                {{#each images}}
-                {{{ this }}}
-                {{/each}}
-              </div>
-            </div>
-    
-        </article> <!-- .product -->
-      </script>
+        <form action="/action_page.php">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" value="">
+          <label for="title">TITLE</label>
+          <input type="text" id="title" name="title" value="">
+          <label for="message">MESSAGE</label>
+          <textarea type="text" id="message" name="message" value="">
+                </textarea>
+          <button type="submit" class="btn">SUBMIT</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2021 EL TIGRE inc.</p>
+  </footer>
+  <script id="template-menu-product" type="text/x-handlebars-template">
+    <article class="product row"> <!-- product -->
+      <div class="product-content col-12 col-md-6">
+        <h3>{{name}}</h3>
+      <div class="content-small"><div class="decoration"></div><p>{{description}}</p></div>
+        <h4>ROASTING: <div class="rating"> {{roasting_raitng}}</div></h4>
+        <h4>INTENSITY: <div class="rating">{{intensity_rating}}</div></h4>
+      </div>
+      <div class="col-12 col-md-6">
+        {{#each images}}
+        <img src="{{this}}"class="product-image">
+        {{/each}}
+      </div>
+    </article> <!-- .product -->
+  </script>
 
 
-    <script src="js/app.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="js/app.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 </body>
+
 </html>

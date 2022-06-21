@@ -1,4 +1,4 @@
-import { select, templates,  } from '../settings.js';
+import { select, templates,  } from './settings.js';
 
 const utils = {}; // eslint-disable-line no-unused-vars
 
@@ -16,10 +16,6 @@ class Product{
     thisProduct.data = data;
 
     thisProduct.renderInMenu();
-    thisProduct.getElements();
-
-    // console.log('new Product', thisProduct);
-
   }
 
   renderInMenu(){
@@ -28,25 +24,18 @@ class Product{
     /* generate HTML based on template */
     const generatedHTML = templates.menuProduct(thisProduct.data);
     /* create element using utlis.createElementFromHTML */
-    thisProduct.element = utils.createDOMFromHTML(generatedHTML);
-    /* find mentu container */
-    const menuContainer = document.querySelector(select.containerOf.menu);
-    /* add element to menu */
-    menuContainer.appendChild(thisProduct.element);
-  }
 
-  getElements(){
-    const thisProduct = this;
+    /* find mentu container */
+    const menuContainers = document.querySelectorAll(select.containerOf.menu);
+
+    for(const contain of menuContainers){
+      thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+      contain.appendChild(thisProduct.element);
+      console.log('menu', thisProduct.element);
+
+    }
     
-    thisProduct.accordionTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
-    thisProduct.form = thisProduct.element.querySelector(select.menuProduct.form);
-    thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs);
-    thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
-    thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
-    thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper);
-    thisProduct.amountWidgetElem = thisProduct.element.querySelector(select.menuProduct.amountWidget);
   }
-    
 }
 
 export default Product;

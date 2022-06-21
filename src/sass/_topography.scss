@@ -1,109 +1,86 @@
 /*Universal title etc.*/
 
 .logo h1 {
-    font-family: $font-family;
-    font-weight: $font-bold;
-    color: $color-light;
-    letter-spacing: 3px;
-    font-size: 28px;
-    margin: 0;
+  font-family: $font-family;
+  font-weight: $font-bold;
+  color: $color-light;
+  letter-spacing: 3px;
+  font-size: 28px;
+  margin: 0;
 }
 
 .logo h2 {
-    font-family: $font-family;
-    font-weight: $font-bold;
-    color: $color-light;
-    letter-spacing: 2px;
-    font-size: 16px;
-    margin: 0;
+  font-family: $font-family;
+  font-weight: $font-bold;
+  color: $color-light;
+  letter-spacing: 2px;
+  font-size: 16px;
+  margin: 0;
 }
 
 .nav-text a{
-    font-family: $font-family;
-    font-weight: $font-semibold;
-    opacity: 0.5;
-    color: $color-light;
-    letter-spacing: 1px;
-    font-size: 16px;
+  font-family: $font-family;
+  font-weight: $font-semibold;
+  opacity: 0.5;
+  color: $color-light;
+  letter-spacing: 1px;
+  font-size: 16px;
 }
+
 .nav-text a:hover{
-    font-family: $font-family;
-    font-weight: $font-semibold;
-    opacity: 1;
-    color: $color-light;
-    letter-spacing: 1px;
-    font-size: 16px;
+  font-family: $font-family;
+  font-weight: $font-semibold;
+  opacity: 1;
+  color: $color-light;
+  letter-spacing: 1px;
+  font-size: 16px;
 }
 
 .discover-text {
-    font-family: $font-family;
-    font-weight: $font-regular;
-    color: $color-light;
-    letter-spacing: 5px;
-    font-size: 30px;
-    text-align: center;
+  font-family: $font-family;
+  font-weight: $font-regular;
+  color: $color-light;
+  letter-spacing: 5px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .discover i {
-    color: $color-light;
-    font-size: 42px;
+  color: $color-light;
+  font-size: 42px;
 }
 
 h1{
-    font-family: $font-family;
-    font-weight: $font-bold;
-    color: $color-detail;
-    letter-spacing: 14px;
-    font-size: 84px;
+  font-family: $font-family;
+  font-weight: $font-bold;
+  color: $color-detail;
+  letter-spacing: 14px;
+  font-size: 84px;
 }
 
 h2{
-    font-family: $font-family;
-    font-weight: $font-semibold;
-    color: $color-detail;
-    letter-spacing: 7px;
-    font-size: 42px;
+  font-family: $font-family;
+  font-weight: $font-semibold;
+  color: $color-detail;
+  letter-spacing: 7px;
+  font-size: 42px;
 }
 
 h3{
-    font-family: $font-family;
-    font-weight: $font-bold;
-    color: $color-dark;
-    letter-spacing: 2px;
-    font-size: 24px;
+  font-family: $font-family;
+  font-weight: $font-bold;
+  color: $color-dark;
+  letter-spacing: 2px;
+  font-size: 24px;
 }
 
 h4{
-    font-family: $font-family;
-    font-weight: $font-bold;
-    color: $color-dark;
-    letter-spacing: 1px;
-    font-size: 16px;
+  font-family: $font-family;
+  font-weight: $font-bold;
+  color: $color-dark;
+  letter-spacing: 1px;
+  font-size: 16px;
+  display: flex;
 }
-
-.rating{
-    font-family: $font-family;
-    font-weight: $font-bold;
-    color: $color-detail;
-    letter-spacing: 1px;
-    font-size: 16px;
-}
-
-
-.content-small{
-    font-family: $font-family;
-    font-weight: $font-semibold;
-    color: $color-dark;
-    font-size: 12px;
-}
-
-.content-big{
-    font-family: $font-family;
-    font-weight: $font-semibold;
-    font-style: italic;
-    color: $color-dark;
-    font-size: 20px;
-}
-
 
 

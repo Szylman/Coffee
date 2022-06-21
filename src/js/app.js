@@ -1,5 +1,5 @@
 import { settings, select, classNames} from './settings.js';
-import Product from './components/Product.js';
+import Product from './Product.js';
 
 const app = {
   initPages: function () {
@@ -25,17 +25,17 @@ const app = {
       link.addEventListener('click', function (event) {
         const clickedElement = this;
         event.preventDefault();
-
+        
         /* get page id from href attribute */
         const id = clickedElement.getAttribute('href').replace('#', '');
-
+        console.log('activepage', id);
         /* run thisApp.activatePage with that id */
         thisApp.activatePage(id);
         /* change URL hash */
         window.location.hash = '#/' + id;
       });
     }
-    console.log('activepage',thisApp.activatePage);
+    
   },
 
   activatePage: function (pageId) {
@@ -79,7 +79,6 @@ const app = {
         thisApp.data.products = prasedResponse;
         /*execute initMenu method */
         thisApp.initMenu();
-        console.log('praseResponse', prasedResponse);
       });
   },
 

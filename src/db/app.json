@@ -1,1 +1,33 @@
-{} 
+{    "products":[
+    {
+       "id":"la lagartija",
+       "name":"01. LA LAGARTIJA",
+       "description":"Mysterius and treacherius... the best choise for the start your journey! it will provide you a rich delicious flavor.",
+       "roasting_raitng":"5/10",
+       "intensity_rating":"6/10",
+       "images":[
+          "images/coffee-1.png"
+       ]
+    },
+    {
+        "id":"el tigre",
+        "name":"02. EL TIGRE",
+        "description":"Really dark coffee only for the real gourmets. It has bitter flavor of grapefruits and is mixed with a little bit of peanuts witch caramel.",
+        "roasting_raitng":"8/10",
+        "intensity_rating":"9/10",
+        "images":[
+           "images/coffee-2.png"
+        ]
+     },
+     {
+        "id":"la cucaracha",
+        "name":"03. LA CUCARACHA",
+        "description":"Sweet and intense witch a big amount of different flavor. Caramel, grapes, strawberry, and name it! It's great choise for warm summer days.",
+        "roasting_raitng":"3/10",
+        "intensity_rating":"7/10",
+        "images":[
+           "images/coffee-3.png"
+        ]
+     }
+ ]
+} 
